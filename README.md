@@ -186,4 +186,7 @@ Public Documentation:
 ```bash
 https://documenter.getpostman.com/view/42926814/2sBXcBo3HY
 ```
-
+Postman Collection File:
+```text
+backend/Smart Airport Ride Pooling API.postman_collection.json
+```
