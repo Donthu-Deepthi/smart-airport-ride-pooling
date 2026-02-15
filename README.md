@@ -179,4 +179,11 @@ frontend/index.html
 
 ---
 
+## 📘 API Documentation (Postman)
+
+Public Documentation:
+
+```bash
+https://documenter.getpostman.com/view/42926814/2sBXcBo3HY
+```
 
