@@ -179,6 +179,29 @@ frontend/index.html
 
 ---
 
+
+### Tech Stack
+
+- Node.js  
+- Express.js  
+- MongoDB Atlas  
+- Mongoose  
+- Postman  
+- HTML, CSS, JavaScript  
+
+---
+
+## Assumptions
+
+- Maximum passengers per cab ≤ 4  
+- Airport location is fixed  
+- Service radius is configurable  
+- Internet connectivity is available  
+- MongoDB Atlas is used for persistence  
+
+---
+
+
 ## 📘 API Documentation (Postman)
 
 Public Documentation:
