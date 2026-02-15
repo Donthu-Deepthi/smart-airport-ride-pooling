@@ -157,7 +157,7 @@ Distance is calculated using the Haversine formula.
 ## Frontend Demo (Optional)
 
 Open:
-``bash
+```bash
 frontend/index.html
 ```
 ---
