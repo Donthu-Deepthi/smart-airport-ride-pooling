@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "5cd42652-ceca-4c40-9dbe-68c388b3f048",
+		"name": "Smart Airport Ride Pooling API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42926814"
+	},
+	"item": [
+		{
+			"name": "Create Cab",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"driverName\": \"Raghu\", \"totalSeats\": 4, \"availableSeats\": 4, \"luggageCapacity\": 3 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/cabs",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"cabs"
+					]
+				},
+				"description": "Creates a new cab in the system.\n\nUsed by admin to register available cabs with seat and luggage capacity."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Passenger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"Sireesh\", \"pickupLocation\": { \"lat\": 17.385, \"lng\": 78.486 }, \"luggage\": 1, \"seatsRequired\": 1, \"detourToleranceKm\": 5 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/passengers",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"passengers"
+					]
+				},
+				"description": "Creates a passenger booking request.\n\nSystem automatically assigns passenger to a cab if:\n\n- Seats are available\n    \n- Detour tolerance is satisfied\n    \n- Within service radius\n    \n\nReturns passenger, booking and fare details."
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Booking",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/bookings/{{bookingId}}/cancel",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"bookings",
+						"{{bookingId}}",
+						"cancel"
+					]
+				},
+				"description": "Cancels an active booking.\n\nFrees cab seats and updates cab status.\n\nbookingId must be passed as path parameter."
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
