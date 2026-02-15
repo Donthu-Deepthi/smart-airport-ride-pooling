@@ -32,23 +32,28 @@ seating, detours, pricing, and handling real-time cancellations.
 
 ## 📁 Project Structure
 
+```text
 airport-ride-pooling/
 │
 ├── backend/
-│ ├── config/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── services/
-│ ├── utils/
-│ ├── server.js
-│ ├── package.json
-│ └── package-lock.json
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── utils/
+│   ├── server.js
+│   ├── package.json
+│   └── package-lock.json
 │
 ├── frontend/
-│ ├── index.html
-│ ├── css/
-│ └── js/
+│   ├── index.html
+│   ├── css/
+│   └── js/
 │
 ├── README.md
 └── .gitignore
+
+```
+
+
